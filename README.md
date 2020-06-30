@@ -1,6 +1,6 @@
 # Google Software Product Sprint
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains the projects done by Saniya Arora through the course of Google SPS'20.
 
 To get started:
 
