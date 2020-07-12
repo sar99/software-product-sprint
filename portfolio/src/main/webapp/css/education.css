@@ -1,0 +1,9 @@
+.education{
+    width: 30vmax;
+    text-align: left;
+    margin-top: 7vh;
+    margin-left: 10vw;
+}
+.education>img{
+    max-width: 80vw;
+}

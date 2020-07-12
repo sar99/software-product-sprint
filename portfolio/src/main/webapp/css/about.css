@@ -1,0 +1,151 @@
+/* ----------------------------  ABOUT SECTION ---------------------------------------*/
+
+.about{
+    width: 100vw;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20vmin;
+    justify-content: space-around;
+
+}
+
+#my-image{
+    width: 550px;
+    max-width: 80vw;
+    opacity: 0;
+    align-items: center;
+    text-align: center;
+}
+
+#my-image>img{
+    width: 100%;
+}
+
+#about-text{
+    
+    text-align: left;
+    color: #75d5fd;
+    max-width: 40vmax;
+    margin-top: 2vh;
+    font-size: 2vmin;
+   
+}
+
+#about-text > div {
+    margin-top: 1vh;
+}
+
+#saniya{
+    max-width: 80vw;
+    opacity: 0;
+}
+
+
+
+
+/* ---------------------------- FLICKER ANIMATION FOR PHOTO AND NAME  ---------------------------------------*/
+
+@keyframes text-flicker {
+    0% {
+      opacity:0.1;
+    }
+    
+    2% {
+      opacity:1;
+    }
+    8% {
+      opacity:0.1;
+    }
+    9% {
+      opacity:1;
+    }
+    12% {
+      opacity:0.1;
+    }
+    20% {
+      opacity:1;
+    }
+    25% {
+      opacity:0.3;
+    }
+    30% {
+      opacity:1;
+    }
+    
+    70% {
+      opacity:0.7;
+    }
+    
+    72% {
+      opacity:0.2;
+    }
+    
+    77% {
+      opacity:.9;
+    }
+    100% {
+      opacity:.9;
+    }
+  }
+  
+
+  .text-flicker {
+    -moz-animation:text-flicker 3s 1 ease-in-out; /* Firefox */
+    -webkit-animation: text-flicker 3s 1 ease-in-out; /* Webkit */
+    -ms-animation: text-flicker normal 3s 1 ease-in-out; /* IE */
+    animation: text-flicker normal 3s 1 ease-in-out; /* Opera and prob css3 final iteration */
+}
+ 
+
+
+
+/* ---------------------------- CSS FOR CHANGING TEXT  ---------------------------------------*/
+
+#changing-text{
+    width: 100vw;
+    text-align: center;
+    color: #75d5fd;
+    font-size: 2vmin;
+}
+
+
+
+
+
+/* ----------------------------  CSS FOR BUTTONS OF DIFF PROFILES  ---------------------------------------*/
+#link-buttons{
+    margin-top: 10vmin;
+    font-size: 1.1vmax;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+#codeforces{
+    background-color: #75d5fd;
+    border-radius: 50px;
+    width: 4.4vmax;
+    height: 4vmax;
+    text-align: center;
+    padding-top: 0.6vmax;
+}
+
+#codeforces>a>img{
+    width: 3vmax;
+    height: 3vmax;
+}
+
+#github{
+    background-color: #75d5fd;
+    border-radius: 50px;
+    width: 4.4vmax;
+    height: 4vmax;
+    text-align: center;
+    padding-top: 0.6vmax;
+}
+
+#github>a>img{
+    width: 3vmax;
+    height: 3vmax;
+}
+

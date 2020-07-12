@@ -1,0 +1,130 @@
+.projects {
+
+
+    align-items: center;
+    width: 90vw;
+    margin-top: 10vmin;
+}
+    
+.skill-title {
+    width: 400px;
+    font-size: 26px;
+    background-color: #75d5fd;
+    color: #222;
+    padding-left: 10px;
+    line-height: 55px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+    
+
+.skill-title-text{
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.projects .skill-title:hover {
+    background-color: #7dafbe;
+    cursor: pointer;
+}
+    
+.projects .expand-collapse {
+    float: right;
+    margin-right: 8px;
+}
+    
+.projects .skill-projects {
+    font-size: 18px;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    margin-left: 0px;
+    padding-left: 10px;
+    transition: max-height 0.2s ease-out;
+
+}
+    
+.skill-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.single-project-content{
+    border-radius: 0 5vmin 5vmin 5vmin;
+    border: 1.5px solid #75d5fd;  
+    margin: 3vmin;
+    width: 375px;
+    color: #75d5fd;
+    padding: 5vmin;
+    align-items: center;
+    background: #222;
+    text-align: center;
+}
+
+
+.single-project-content>img{
+    width: 300px;
+}
+
+.single-project-title{
+    margin-top: 10px;
+    font-size: 2.7vmin;
+   
+}
+
+.arrow-down {
+    margin: 15px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-top: 10px solid #222;
+  }
+
+.single-project-stack{
+    margin-top: 5px;
+    font-size: 2.5vmin;
+}
+
+.single-project-description{
+    margin-top: 5px;
+    font-size: 2.2vmin;
+}
+
+
+.single-project-link{
+    border: 1px solid #75d5fd;
+    color: #75d5fd;
+    transition: 0.5s ease;
+    margin-top: 15px;
+}
+
+.single-project-link>a{
+    color: #75d5fd;
+    text-decoration: none;
+    transition: 0.5s ease; 
+    margin: 4vmin;
+}
+
+.single-project-link:hover {
+    color: #222;
+    background-color: #75d5fd;
+}
+
+.single-project-link:hover a{
+    color: #222;
+}
+

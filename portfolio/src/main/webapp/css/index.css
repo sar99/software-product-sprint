@@ -1,0 +1,148 @@
+
+/* ----------------------------  GENERAL PROPERTIES OF WEBSITE AND CLASSES USED FREQUENTLY  ---------------------------------------*/
+html{
+    width: 100vw;
+    
+}
+body{
+    background-color: #222222;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#main{
+    display: none;
+}
+
+.blur{
+    filter: blur(14px);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/* ----------------------------  STYLE FOR SECTION HEADINGS  ---------------------------------------*/
+
+
+.heading{
+    text-decoration: underline;
+    font-size: 2.5vmax;
+    color: #75d5fd;
+    margin-top: 10vh;
+}
+.left{
+    text-align: left;
+    margin-left: 3vw;
+}
+.right{
+    text-align: right;
+    margin-right: 3vw;
+}
+
+
+/* ----------------------------  PROPERTIES OF INITIAL SCREEN ---------------------------------------*/
+
+#start-screen{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    animation: opacity 2s ease-out;
+
+}
+
+.float{
+    transform: translatey(0px);
+    animation: float 4s ease-in-out infinite;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 5vmin;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+
+/* ----------------------------  BREAKER ---------------------------------------*/
+
+#breaker{
+    margin-top: 5vh;
+    width: 100vw;    
+}
+#breaker > img {
+    width: 100vw;
+}
+
+
+
+/* ----------------------------  COLOR SHADES ---------------------------------------*/
+.pink-gradient{
+    background:  linear-gradient(0deg, #FF1493, #fe53bb);
+}
+
+.yellow-gradient{
+    background:  linear-gradient(0deg, #fda50f, #f5d300);
+}
+
+.g-gradient{
+    background:  linear-gradient(0deg, #20B2AA, #09fbd3);
+}
+
+
+.pinkt{
+    color: #fe53bb;
+    text-shadow: 2px 2px 10px #fe53bb;
+}
+.yellowt{
+    color: #f5d300;
+    text-shadow: 2px 2px 10px #f5d300;
+}
+
+.greent{
+    color: #09fbd3;
+    text-shadow: 2px 2px 10px #09fbd3;
+}
+
+
+.pink{
+    background-color: #fe53bb;
+    box-shadow: 0.4vmin  0.1vmin 15px #fe53bb;
+}
+.green{
+    background-color: #09fbd3;
+    box-shadow: 0.4vmin  0.1vmin 15px #09fbd3;
+}
+.yellow{
+    background-color: #f5d300;
+    box-shadow: 0.41vmin  0.1vmin 15px #f5d300;
+}

@@ -3,16 +3,230 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <link rel="stylesheet" type="text/css" href="./css/education.css">
+    <link rel="stylesheet" type="text/css" href="./css/experience.css">
+    <link rel="stylesheet" type="text/css" href="./css/skills.css">
+    <link rel="stylesheet" type="text/css" href="./css/projects.css">
+    <link rel="stylesheet" type="text/css" href="./css/end.css">
+    <!-- <link rel="stylesheet/less" type="text/css" href="./css/nav.less" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body onresize="displayNav()">
+
+
+    <!-- -------------------------------------------- The initial screen----------------------------------------- -->
+    <div id="start-screen" class="flex-row">
+        <div class="float">
+            "I'm really sorry!! It's so dark here!
+            Let me switch on the lights."
+        </div>
     </div>
-  </body>
+
+
+
+
+
+    <!-- ----------------------------------------Improvised Scroll Bar --------------------------------------- -->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+
+
+
+
+    <div id="main" class="flex-col">
+        <!-- --------------------------------------------- NavBar ------------------------------------------------ -->
+        <div id="nav-main"></div>
+
+
+
+        <!-- -------------------------------------------- About Section ----------------------------------------- -->
+        <div id="TOABOUT" class="about flex-row">
+
+            <div id="my-image">
+                <img src="img/saniya.png" />
+            </div>
+
+            <div id="about-text" class="flex-col">
+
+                <div>Hello!</div>
+
+                <div id="saniya">
+                    <img src="img/name.png" />
+                </div>
+
+                <div>A sophomore Computer Science student at IIIT - Gwalior, who is always keen to learn and explore
+                    more about technology and take up any new opportunity or challenge.</div>
+
+                <div>My drive for logical reasoning leads to my interest in Competitive Programming. With some
+                    experience in Full Stack Web Development, I am always exploring new fields.</div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- --------------------------------- Changing Text (CSS in about.css)-------------------------------------- -->
+        <div id="changing-text">
+            <h1>
+                <span class="txt-rotate" data-period="2000"
+                    data-rotate='["",  "LEARN.", "CODE.", "SLEEP.", "REPEAT." ]'></span>
+            </h1>
+        </div>
+
+
+
+
+        <!-- --------------------------------- Buttons (CSS in about.css)-------------------------------------- -->
+        <div id="link-buttons" class="flex-row">
+            <div id="github"><a href="https://github.com/sar99"><img src="./img/github.png"></img></a></div>
+
+            <div id="codeforces"><a href="https://codeforces.com/profile/saniya.rishi"><img
+                        src="./img/codeforces.webp"></a>
+            </div>
+
+            <div id="github"><a href="https://www.linkedin.com/in/saniya-arora-408726181/"><img
+                        src="./img/linkedin.png"></img></a></div>
+        </div>
+
+
+
+
+
+
+
+        <!-- --------------------------------- Break Line  (CSS in index.css)-------------------------------------- -->
+        <div id="breaker">
+            <img src="./img/breaker.png" />
+        </div>
+
+
+
+
+        <!-- -------------------------------------------- Education ----------------------------------------------- -->
+
+
+        <div id="TOEDUCATION" class="heading left">
+            EDUCATION
+        </div>
+        <div class="education">
+            <img src="./img/education.png" />
+        </div>
+
+
+
+
+
+        <!-- -------------------------------------------- Experience ----------------------------------------------- -->
+        <div id="TOEXPERIENCE" class="heading right">
+            EXPERIENCE
+        </div>
+        <div class="experience flex-row">
+        </div>
+
+
+
+        <!-- ---------------------------------------------- Skills ------------------------------------------------- -->
+        <div id="TOSKILLS" class="heading left">
+            SKILLS
+        </div>
+
+        <div class="skills flex-col">
+            <div class="skill-box">
+
+            </div>
+            <div class="skill-name">
+
+            </div>
+        </div>
+
+
+        <!-- ----------------------------------------------Projects ------------------------------------------------- -->
+        <div id="TOPROJECTS" class="heading right">
+            PROJECTS
+        </div>
+
+        <div class=" projects flex-col">
+
+        </div>
+
+
+
+        <!-- ---------------------------------------------- Cherry On Top ------------------------------------------------- -->
+
+        <div id="TOCHERRY-ON-TOP" class="heading left">
+            CHERRY ON TOP
+        </div>
+        <div class="cherry flex-row">
+            <div class="achieve">
+                <img src="./img/achievements.png" />
+            </div>
+            <div class="achieve">
+                <img src="./img/responsibilities.png" />
+            </div>
+
+        </div>
+
+
+        <!-- ---------------------------------------------- Coming Soon ------------------------------------------------- -->
+
+        <div id="TOCOMING-SOON" class="heading right">
+            COMING SOON
+        </div>
+        <div class="cherry flex-row">
+            <div class="achieve">
+                <img src="./img/janitormonkey.png" />
+            </div>
+            <div class="achieve">
+                <img src="./img/MERN.png" />
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- --------------------------------- Break Line  (CSS in index.css)-------------------------------------- -->
+        <div id="breaker">
+            <img src="./img/breaker.png" />
+        </div>
+
+
+        <!-- ------------------------------------------- Footer--------------------------------------------------- -->
+        <div id="end">
+            Developed by Saniya Arora.
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript" src="./js/scroll.js"></script>
+<script type="text/javascript" src="./js/changingText.js"></script>
+<script type="text/javascript" src="./js/experience.js"></script>
+<script type="text/javascript" src="./js/skills.js"></script>
+<script type="text/javascript" src="./js/projects.js"></script>
+
 </html>
