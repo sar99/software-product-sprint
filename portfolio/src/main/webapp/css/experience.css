@@ -1,0 +1,35 @@
+.experience{
+    margin-top: 8vmin;
+    margin-left: 2vmin;
+    margin-right: 2vmin;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.job{
+    align-items: center;
+    color: #75d5fd;
+    text-align: center;
+    max-width: 15vmax;
+}
+.logo>img{
+    max-width: 10vmax;    
+}
+.company{
+    margin-top: 2vmin;
+    font-size: 2.7vmin;
+}
+
+.desig{
+    margin-top: 2.5vmin;
+    font-size: 2.7vmin;
+    text-decoration: underline;
+}
+.time{
+    margin-top: 2.5vmin;
+    font-size: 2vmin;
+}
+.location{
+    margin-top: 1vmin;
+    font-size: 2vmin;
+}

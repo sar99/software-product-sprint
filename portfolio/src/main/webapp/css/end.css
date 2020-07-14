@@ -1,0 +1,23 @@
+.cherry{
+    margin-top: 8vmin;
+    margin-left: 2vmin;
+    margin-right: 2vmin;
+    justify-content: space-evenly;
+
+}
+
+.achieve>img{
+    max-width: 30vmax;
+    margin: 5vmin;
+}
+
+
+#end{
+
+    text-align: center;
+    font-size: 2vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    color: #75d5fd;
+
+}
