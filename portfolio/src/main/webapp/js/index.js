@@ -1,14 +1,20 @@
 async function getComments(){
         const response = await fetch("/get-comments");
-        const comment = await response.text();
+        const comments = await response.json();
 
-        let box = document.createElement("div");
+        console.log(comments);
+
         let container = document.querySelector(".comments");
 
-        box.classList.add("comment-item");
-        box.innerHTML = comment;
 
-        container.appendChild(box);
+        comments.forEach((comment)=> {
+            let box = document.createElement("div");
+
+            box.classList.add("comment-item");
+            box.innerHTML = comment;
+
+            container.appendChild(box);
+            })
 
     }
 
