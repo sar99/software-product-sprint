@@ -21,3 +21,27 @@
     color: #75d5fd;
 
 }
+
+
+
+.comments{
+    display: flex;
+    flex-direction: col;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vmin;
+}
+.comment-item{
+    width: 600px;
+    max-width: 90vw;
+    padding: 3vmin;
+    border: 2px solid #75d5fd;
+    color: #75d5fd;
+    transition: 1s ease-in-out;
+}
+
+.comment-item:hover{
+    border: 2px solid #222;
+    color: #222;
+    background: #75d5fd
+}
