@@ -1,6 +1,23 @@
+async function getComments(){
+        const response = await fetch("/get-comments");
+        const comment = await response.text();
+
+        let box = document.createElement("div");
+        let container = document.querySelector(".comments");
+
+        box.classList.add("comment-item");
+        box.innerHTML = comment;
+
+        container.appendChild(box);
+
+    }
+
+
 $(document).ready(function () {
 
 
+    getComments();
+    
 
     $("a").on('click', function (event) {
 
@@ -35,7 +52,7 @@ $(document).ready(function () {
         document.getElementById("saniya").style.opacity = "1";
         document.getElementById("my-image").style.opacity = "1";
     },
-        1000);
+        3000);
 
 
 
