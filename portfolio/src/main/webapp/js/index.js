@@ -1,5 +1,5 @@
 async function getComments(){
-        const response = await fetch("/get-comments");
+        const response = await fetch("/comments");
         const comments = await response.json();
 
         console.log(comments);
