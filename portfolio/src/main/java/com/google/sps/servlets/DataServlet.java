@@ -14,6 +14,13 @@
 
 package com.google.sps.servlets;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.sps.data.Comment;
 import java.io.IOException;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -27,24 +34,33 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/comments")
 public class DataServlet extends HttpServlet {
 
-    private List<String> comments;
-
-    @Override
-    public void init(){
-        comments = new ArrayList<>();
-
-        comments.add("Hey this is user 1.");
-        comments.add("Hello! I am user 2 and this is my comment");
-        comments.add("Hola! Written here is the comment of user 3");
-    }
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    String commentsJson = convertToJson(comments);
+
+    Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+
+    List<Comment> comments = new ArrayList<>();
+
+    for (Entity entity : results.asIterable()) {
+      long id = entity.getKey().getId();
+      String title = (String) entity.getProperty("comment");
+      long timestamp = (long) entity.getProperty("timestamp");
+
+      Comment comment = new Comment(id, title, timestamp);
+      comments.add(comment);
+    }
+
+    Gson gson = new Gson();
 
     response.setContentType("application/json;");
-    response.getWriter().println(commentsJson);
+    response.getWriter().println(gson.toJson(comments));
+
+
   }
 
 
@@ -60,12 +76,27 @@ public class DataServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         String comment = request.getParameter("comment");
+        long timestamp = System.currentTimeMillis();
+        
         System.out.println("HHIIIIII" + comment);
+        if(comment.isEmpty())
+        {
+            System.out.println("no addition of blank comment");
+        }
+        else
+        {
+            System.out.println("hey" + comment);
+            Entity newComment = new Entity("Comment");
+            newComment.setProperty("comment", comment);
+            newComment.setProperty("timestamp", timestamp);
 
-        if(comment!="")
-        comments.add(comment);
+            DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+            datastore.put(newComment);
+        }
 
 
-        response.sendRedirect("/index.html");
+        response.setContentType("text/plain");  // Set content type of the response so that jQuery knows what it can expect.
+        response.setCharacterEncoding("UTF-8"); // You want world domination, huh?
+        response.getWriter().write("hii");
     }
 }

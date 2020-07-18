@@ -1,17 +1,63 @@
+var noOfComments = 3; 
+var comments = {};
+
+$(document).on("submit", "#comments-form", function(event) {
+    var $form = $(this);
+
+    $.post($form.attr("action"), $form.serialize(), function(response) {
+        getComments();
+        $('input[name=comment').val('');
+
+    });
+
+    event.preventDefault(); 
+})
+
+
+function getMoreComments(){
+    noOfComments*=2;
+
+    let container = document.querySelector("#user-comments");
+    container.innerHTML = '';
+
+    comments.forEach((comment, index)=> {
+
+        if(index>=noOfComments)
+        return false;
+        let box = document.createElement("div");
+
+        box.classList.add("comment-item");
+        box.innerHTML = comment.comment;
+
+        container.appendChild(box);
+        })
+
+
+    if(comments.length <= noOfComments)
+    {
+        document.querySelector("#more-comments").style.display = "none";
+    }
+
+}
+
+
 async function getComments(){
         const response = await fetch("/comments");
-        const comments = await response.json();
+        comments = await response.json();
 
         console.log(comments);
 
-        let container = document.querySelector(".comments");
+        let container = document.querySelector("#user-comments");
+        container.innerHTML = '';
 
+        comments.forEach((comment, index)=> {
 
-        comments.forEach((comment)=> {
+            if(index>=noOfComments)
+            return false;
             let box = document.createElement("div");
 
             box.classList.add("comment-item");
-            box.innerHTML = comment;
+            box.innerHTML = comment.comment;
 
             container.appendChild(box);
             })
