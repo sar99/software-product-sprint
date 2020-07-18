@@ -50,4 +50,31 @@
 .comment-input{
     width: 600px;
     max-width: 90vw;
+    padding: 2vmin;
+    font-size: 1.7vmin
+}
+
+#more-comments{
+
+    margin-top: 1.5vmin;
+    border: 2px solid #75d5fd;
+    color: #75d5fd;
+    padding: 2vmin;
+    transition: 0.35s ease-in-out;
+    cursor: default
+
+}
+
+#more-comments:hover{
+    border: 2px solid #222;
+    color: #222;
+    background: #75d5fd
+}
+
+#submit-button{
+    background: #222;
+    border: 2px solid #75d5fd;
+    color: #75d5fd;
+    padding: 2vmin;
+    margin: 1vmin;
 }
