@@ -1,5 +1,5 @@
 var noOfComments = 3; 
-var comments = {};
+var comments;
 
 $(document).on("submit", "#comments-form", function(event) {
     var $form = $(this);
@@ -20,20 +20,20 @@ function getMoreComments(){
     let container = document.querySelector("#user-comments");
     container.innerHTML = '';
 
-    comments.forEach((comment, index)=> {
+    comments["comments"].forEach((comment, index)=> {
 
         if(index>=noOfComments)
         return false;
         let box = document.createElement("div");
 
         box.classList.add("comment-item");
-        box.innerHTML = comment.comment;
+        box.innerHTML = "(" + comment.email + ") " + comment.comment;
 
         container.appendChild(box);
         })
 
 
-    if(comments.length <= noOfComments)
+    if(comments["comments"].length <= noOfComments)
     {
         document.querySelector("#more-comments").style.display = "none";
     }
@@ -50,17 +50,43 @@ async function getComments(){
         let container = document.querySelector("#user-comments");
         container.innerHTML = '';
 
-        comments.forEach((comment, index)=> {
+        comments["comments"].forEach((comment, index)=> {
 
             if(index>=noOfComments)
             return false;
             let box = document.createElement("div");
 
             box.classList.add("comment-item");
-            box.innerHTML = comment.comment;
+            box.innerHTML = "(" + comment.email + ") " + comment.comment;
 
             container.appendChild(box);
             })
+
+
+        if(comments["logged-in"]=="True")
+        {
+            let form = document.getElementById("comments-form");
+            form.style.display = "block";
+            let logout = document.getElementById("logout");
+            logout.style.display = "block";
+            let login = document.getElementById("login");
+            login.style.display = "none";
+
+            let link = document.getElementById("logout-link");
+            link.setAttribute("href", comments["url"]);
+        }
+        else
+        {
+            let form = document.getElementById("comments-form");
+            form.style.display = "none";
+            let logout = document.getElementById("logout");
+            logout.style.display = "none";
+            let login = document.getElementById("login");
+            login.style.display = "block";
+
+            let link = document.getElementById("login-link");
+            link.setAttribute("href", comments["url"]);
+        }
 
     }
 
