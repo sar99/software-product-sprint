@@ -1,28 +1,33 @@
 const skills = [
+
     {
-        name: "AWS",
-        score: "90%"
+        name: "C ++",
+        score: "60%"
     },
     {
         name: "Python",
-        score: "50%"
-    },
-    {
-        name: "C ++",
         score: "40%"
     },
     {
-        name: "Django",
-        score: "30%"
+        name: "Java",
+        score: "40%"
     },
     {
         name: "LAMP Stack",
-        score: "50%"
+        score: "70%"
     },
     {
         name: "MERN Stack",
-        score: "20%"
-    }
+        score: "50%"
+    },
+    {
+        name: "Django",
+        score: "50%"
+    },
+    {
+        name: "AWS",
+        score: "40%"
+    },
 
 ]
 

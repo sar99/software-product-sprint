@@ -2,19 +2,25 @@
 
 const projects = [
     {
-        skill: "AWS",
+        skill: "C++",
         projectList: [
             {
-                name: "MY PORTFOLIO ",
+                name: "THE PERIODIC TABLE",
                 description: [
-                    "- Developed my own portfolio website.", "- Hosted the website using Heroku."
+                    "- Developed an interactive periodic table information program.", "- Included various graphics elements and file handling."
                 ],
-                link: "https://www.github.com/sar99",
-                image: "portfolio",
+                link: "",
+                image: "periodic-table",
                 stack: [
-                    "REACT.JS"
+                    "C++"
                 ]
             },
+        ]
+    },
+
+    {
+        skill: "Python",
+        projectList: [
             {
                 name: "AVENGERS ASSEMBLE",
                 description: [
@@ -32,17 +38,58 @@ const projects = [
     {
         skill: "Java",
         projectList: [
+            
+            
             {
-                name: "SKYPEY",
+                name: "BRICK BRAKER",
                 description: [
-                    "- Developed a chatting interface using React Redux.", "- Included functions like send, edit and delete message."
+                    "- Developed an arcade game that involves braking all bricks by controlling a ball.",
                 ],
-                link: "https://github.com/sar99/Skypey",
-                image: "skypey",
+                link: "https://github.com/sar99/BrickBraker-Game",
+                image: "avengers-assemble",
                 stack: [
-                    "REACT.JS"
+                    "Java"
                 ]
             },
+            {
+                name: "BRICK BRAKER",
+                description: [
+                    "- Developed an arcade game that involves braking all bricks by controlling a ball.",
+                ],
+                link: "https://github.com/sar99/BrickBraker-Game",
+                image: "avengers-assemble",
+                stack: [
+                    "Java"
+                ]
+            },
+            {
+                name: "FLAPPY BIRD",
+                description: [
+                    "- Tried to recreate the flappy bird game using Java.",
+                ],
+                link: "https://github.com/sar99/FlappyBird",
+                image: "avengers-assemble",
+                stack: [
+                    "Java"
+                ]
+            },
+            {
+                name: "PING PONG",
+                description: [
+                    "- Tried to recreate the very famous Ping Pong (tennis) game using Java.",
+                ],
+                link: "https://github.com/sar99/PingPong",
+                image: "avengers-assemble",
+                stack: [
+                    "Java"
+                ]
+            },
+        ]
+
+    },
+    {
+        skill: "LAMP Stack (Linux, Apache, MySQL, PHP)",
+        projectList: [
             {
                 name: "IVH AND MDP ONLINE REGISTRATION",
                 description: [
@@ -55,23 +102,6 @@ const projects = [
                 ]
             },
             {
-                name: "THE PERIODIC TABLE",
-                description: [
-                    "- Developed an interactive periodic table information program.", "- Included various graphics elements and file handling."
-                ],
-                link: "",
-                image: "periodic-table",
-                stack: [
-                    "C++"
-                ]
-            },
-        ]
-
-    },
-    {
-        skill: "C++",
-        projectList: [
-            {
                 name: "BOOK YOUR BOOK v1.0",
                 description: [
                     "- Developed a community website for students for exchange of books.", "- Included features like upload, borrow and lend books.", "- v2.0 coming soon!"
@@ -83,7 +113,35 @@ const projects = [
                 ]
             },
         ]
-    }
+    },
+
+    {
+        skill: "MERN Stack (MongoDB, Express.js, React.js, Node.js)",
+        projectList: [
+            {
+                name: "MY PORTFOLIO ",
+                description: [
+                    "- Developed my own portfolio website.", "- Hosted the website using Heroku."
+                ],
+                link: "https://www.github.com/sar99",
+                image: "portfolio",
+                stack: [
+                    "REACT.JS"
+                ]
+            },
+            {
+                name: "SKYPEY",
+                description: [
+                    "- Developed a chatting interface using React Redux.", "- Included functions like send, edit and delete message."
+                ],
+                link: "https://github.com/sar99/Skypey",
+                image: "skypey",
+                stack: [
+                    "REACT.JS"
+                ]
+            },
+        ]
+    },
 
 
 ]
